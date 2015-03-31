@@ -1,0 +1,105 @@
+
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>A Prelude to Understanding Our Robot Overlords</title>
+        <link rel="stylesheet" href="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Computers...  How Do They Work?</h2>
+    <div class="concept-description">
+        Computers, at their most basic, are really just a bunch of On/Off switches that perform binary logic at ludicrous speed. So, what does that mean?  Well, you need a program that tells the computer, "Hey! That particular set of ons and offs (0s and 1s) right there.  Yeah, those guys. Make them display on the monitor, but make them a cute cat picture or something.  Humans love cute cat pictures."
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Python</h2>
+    <div class="concept-description">
+        So, the realm of 1s and 0s is all fine and dandy, but sounds a little too impossible to read or write for my tastes.  Luckily for us, programmer heroes of yore created programming languages like Python so that we do not need to know how to interpret 1s and 0s.  Instead, Python uses a grammar (called Backus-Naur) that is far more readable and writeable for us mere humans.  With this grammar we can write "expressions," which are basically sentences that Python can then translate into the 1s and 0s that the computer speaks.  Finally, if the grammar of our expressions is precise and our logic is sound, the computer does something.  Hopefully similar to what you wanted to have happen.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">What Is a Variable?</h2>
+    <div class="concept-description">
+        A variable is a meaningful way to give names to values.  What does that even mean?  Honestly, it's something we do in the unplugged world all the time.  Like, let's say, your age.  What is your age this year?  What is it next year?  What was your age two years before you were born?  In this instance, our variable's name is <em>age</em> and it holds the value of your age according to the question being asked.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">...But how does that work with computers?</h2>
+    <div class="concept-description">
+        In Python's grammar, we <strong>assign</strong> values to variables using an equals sign.  The interesting thing about this is since variables can vary we can say something like: my_age = current_year - birth_year.  See what I did there?  I didn't even put in a static number.  I assigned my_age to be equal to the calculation performed on two other variables.  So long as we provide the correct years for current_year and birth_year then the computer with automagically make my_age equal to my age.  Also, it much more readable and understandable as to what is going on this way than it would be if we were just pluggin in numbers.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Equality vs Assignment</h2>
+    <div class="concept-description">
+        In Python the equals sign means assignment.  For instance, if I put in my_age = 5, then my_age is storing the value 5.  Equality is another matter for the next lesson.  For now, just know that the equals sign means assignment in the Python grammar.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Strings</h2>
+    <div class="concept-description">
+        Variables can also store text, but when a variable stores text it's called a string and it's wrapped in quotation marks.  Single or double.  Doesn't matter.  There are all sorts of nifty things you can do to strings, too.  You can pull out substrings, which are just snippets of the text, you can find where certain characters occur by using the aptly named find.  Strings are fun.  You'll love them.  One word of warning, though: 2 is a number, but '2' is a string.  Got it?  Good.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">The Fun World of Funky Functions</h2>
+    <div class="concept-description">
+        In the last lesson I illustrated that variables are something that we use in everyday life by using the example of a person's age as an example.  Let's make that into a function in the Python grammar:<br><br>def current_age(current_year, birth_year):<br>&nbsp;&nbsp;&nbsp;&nbsp;age = current_year - birth_year<br>return age<br><br>The glorious thing about this is that it can be used to find anybody's age!  That in turn is the glory of functions: they save you from repetition.  In this instance, I don't have to write a new function everytime I want to find someone or something's age.  I just have to plug in the numbers for current_year and birth_year and I'm good to go.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Creating vs Using Functions</h2>
+    <div class="concept-description">
+        Above, we created the function called current_age.  It takes two inputs:  current_year and birthyear.  It also outputs, or as in the case of Python grammar, it <em>returns</em> a value for age.  So, it takes two inputs and returns uno.  How do get it to do this returning business?  Well, we have to tell it to print the returned value.  So, everyone knows that Keanu Reeves is immortal, right?  Google it if not.  Anyway, let's guesstimate Keanu was born in 1435.  We can get his age like so:<br><br>print current_age(2015, 1435)<br><br>Which would print something like:<br>>>>580<br><br>There.  Keanu Reeves is around 580 years old.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Make Sure to Output</h2>
+    <div class="concept-description">
+        Remember that grammar is explicit.  If you don't tell the computer what to output with a return statement then it frankly won't put out.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Decisions with If</h2>
+    <div class="concept-description">
+        Just like how variables and functions can be represented with real world scenarios, so too can the Python decision making mechanism: if.  Let's say that you've just been assualted by someone or something.  Your mind might go into 'fight or flight' mode.  In Python this might look like this:]<br><br>def fight_or_flight(monster):<br>&nbsp;&nbsp;&nbsp;&nbsp;if monster == 'mom cooking' or monster = 'spider'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'Fly, you fool.'<br>&nbsp;&nbsp;&nbsp;&nbsp;return 'http://i.imgur.com/ufgJQ.jpg'<br><br>Pretty simple, right?  If being assualted by my mom's cooking or a spider, you run away.  Otherwise you attack back with a sledgehammer.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Repetition with While</h2>
+    <div class="concept-description">
+        What if you want to keep doing something until a certain thing happens?  That's what while does for you. For instance, let's say that you find a spider in your home.  Your while loop can tell you something like 'so long as you haven't run 50 miles run another mile.' It'll stop running--just like you--once you're 50 miles from said spider.
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Structured Data: Lists and For Loops</h2>
+    <div class="concept-description">
+        Lists are like super strings.  Remember how string where wrapped in quotations marks?  Well, lists are wrapped in these things: [].  So, let's say I wanted to make a list containing the years notable things happened to me in life.  It might look something like this:<br><br>life_events = [1982, 1996, 2000, 2004]<br><br>Now, that gives me years, but it doesn't say what was happening in those years.  Well, you can have lists inside of other lists.  So, how about this:<br><br>life_events = [[Born, 1982], [Moved, 1996], [Graduated HS, 2000], [Joined Navy, 2004]]
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">Getting List Elements</h2>
+    <div class="concept-description">
+        Remember indexing strings?  Well, you can pretty much do the same thing on lists.  So, using the above life_events list, if I wanted to know the second element of the list I would:<br><br>print life_events[1]<br>&gt;&gt;&gt;[Moved, 1996]<br><br>What if I only wanted the name of the event?  Try this:<br><br>print life_events[1][0]
+    </div>
+</div>
+<div class="col-md-12 drop-shadow">
+    <h2 class="concept-title">For Loops</h2>
+    <div class="concept-description">
+        For loops are like while loops but specialized for iterating through list items.  So, lets say I have this list, but don't want to comb through it to count all important events in the 80's.  I could have a for loop enable my laziness and count the events for me.
+    </div>
+</div>
+        </div>
+    </body>
+</html>
